@@ -1,13 +1,62 @@
 import 'package:flutter/material.dart';
+import 'package:yersen/screens/responsive.dart';
 
-class welcome extends StatelessWidget {
-  const welcome({super.key});
+class denme extends StatefulWidget {
+  const denme({super.key});
+
+  @override
+  State<denme> createState() => _denmeState();
+}
+
+class _denmeState extends State<denme> {
+  screen device = screen.mobile;
+
+  drawscreen() {
+    switch (device) {
+      case (screen.mobile):
+        return mainphone(context);
+      case (screen.tablet):
+        return Row(
+          children: [
+            mainphone(context),
+            deneme(),
+          ],
+        );
+      case (screen.desktop):
+        return Row(
+          children: [mainphone(context), deneme(), deneme2()],
+        );
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
+    setState(() {});
+    device = detectscreen(MediaQuery.of(context).size);
     return Scaffold(
-        body: Container(
-      color: Color.fromARGB(255, 233, 238, 247),
+      body: drawscreen(),
+    );
+  }
+
+  Container deneme2() {
+    return Container(
+      child: Row(
+        children: [Text("aaaaaaaaaaaaa")],
+      ),
+    );
+  }
+
+  Container deneme() {
+    return Container(
+      child: Row(
+        children: [Text("ssssssssssssssssssss")],
+      ),
+    );
+  }
+
+  Container mainphone(BuildContext context) {
+    return Container(
+      color: Color.fromARGB(255, 83, 96, 109),
       child: Center(
         child: Padding(
           padding: const EdgeInsets.only(top: 100),
@@ -16,24 +65,18 @@ class welcome extends StatelessWidget {
               ClipRRect(
                 borderRadius: BorderRadius.circular(100.0),
                 child: Image.asset(
-                  "assets/images/ikonn.png",
+                  "assets/images/icon.jpg",
                   width: 250,
                   fit: BoxFit.cover,
                 ),
               ),
               SizedBox(
-                height: 70,
-              ),
-              //Text(
-              //"Yersen",
-              //),
-              SizedBox(
-                height: 80,
+                height: 90,
               ),
               email(),
               password(),
               SizedBox(
-                height: 45,
+                height: 65,
               ),
               Column(
                 children: [
@@ -48,7 +91,7 @@ class welcome extends StatelessWidget {
           ),
         ),
       ),
-    ));
+    );
   }
 
   ElevatedButton login(BuildContext context) {
@@ -78,8 +121,8 @@ class welcome extends StatelessWidget {
         ),
         style: ElevatedButton.styleFrom(
             minimumSize: Size(200, 46),
-            primary: Color.fromARGB(255, 94, 85, 196),
-            onPrimary: Color.fromARGB(255, 94, 85, 196)));
+            primary: Color.fromRGBO(8, 161, 140, 1),
+            onPrimary: Color.fromRGBO(8, 161, 140, 1)));
   }
 
   ElevatedButton signup(BuildContext context) {
@@ -109,8 +152,8 @@ class welcome extends StatelessWidget {
         ),
         style: ElevatedButton.styleFrom(
             minimumSize: Size(200, 46),
-            primary: Color.fromARGB(255, 94, 85, 196),
-            onPrimary: Color.fromARGB(255, 94, 85, 196)));
+            primary: Color.fromRGBO(8, 161, 140, 1),
+            onPrimary: Color.fromRGBO(8, 161, 140, 1)));
   }
 
   Container email() {
@@ -119,19 +162,20 @@ class welcome extends StatelessWidget {
       width: 350,
       height: 50,
       decoration: BoxDecoration(
-          color: Color.fromARGB(255, 52, 55, 60),
+          color: Color.fromRGBO(8, 161, 140, 1),
           borderRadius: BorderRadius.circular(100)),
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 5),
         child: TextField(
           decoration: InputDecoration(
-              hintText: 'Email',
+              hintText: 'email',
               prefixIcon: Icon(
                 Icons.email,
-                color: Color.fromARGB(210, 255, 255, 255),
+                color: Color.fromARGB(255, 83, 96, 109),
               ),
               border: InputBorder.none,
-              hintStyle: TextStyle(color: Color.fromARGB(92, 255, 255, 255))),
+              hintStyle:
+                  TextStyle(color: const Color.fromARGB(53, 255, 255, 255))),
         ),
       ),
     );
@@ -144,7 +188,7 @@ Container password() {
     width: 350,
     height: 50,
     decoration: BoxDecoration(
-        color: Color.fromARGB(255, 52, 55, 60),
+        color: Color.fromRGBO(8, 161, 140, 1),
         borderRadius: BorderRadius.circular(100)),
     child: Padding(
       padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 5),
@@ -153,11 +197,11 @@ Container password() {
             hintText: 'password',
             prefixIcon: Icon(
               Icons.lock,
-              color: Color.fromARGB(210, 255, 255, 255),
+              color: Color.fromARGB(255, 83, 96, 109),
             ),
             border: InputBorder.none,
             hintStyle:
-                TextStyle(color: const Color.fromARGB(92, 255, 255, 255))),
+                TextStyle(color: const Color.fromARGB(53, 255, 255, 255))),
         obscureText: true,
       ),
     ),
