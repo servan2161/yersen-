@@ -46,6 +46,7 @@ dependencies:
   dio: ^5.4.0
   
 
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -84,7 +85,11 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  # fonts:
+  fonts:
+    - family: protest
+      fonts:
+        - asset: assets/fonts/ProtestRiot-Regular.ttf
+   
   #   - family: Schyler
   #     fonts:
   #       - asset: fonts/Schyler-Regular.ttf

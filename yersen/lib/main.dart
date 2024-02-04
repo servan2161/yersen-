@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:yersen/screens/corbalar.dart';
 import 'package:yersen/screens/weelcome.dart';
 import 'package:yersen/screens/home.dart';
 import 'package:yersen/screens/singup.dart';
@@ -23,6 +24,7 @@ class MyApp extends StatelessWidget {
         '/deneme': (context) => denme(),
         '/profile': (context) => profile(),
         '/weelcome': (context) => weelcome(),
+        '/corbalar': (context) => corba(),
       },
       initialRoute: '/weelcome',
       theme: ThemeData(

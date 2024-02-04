@@ -1,5 +1,3 @@
-// ignore_for_file: prefer_const_constructors, sort_child_properties_last, prefer_const_literals_to_create_immutables
-
 import 'package:flutter/material.dart';
 import 'package:yersen/screens/widget/myappbar.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -7,6 +5,7 @@ import 'package:url_launcher/url_launcher.dart';
 class profile extends StatelessWidget {
   const profile({super.key});
   final String targetPageURL = "https://www.google.com/intl/tr/gmail/about/";
+  // urlyi tanımlayıp aşağıda da fonksiyonu tanımladığımız yer
   void email() async {
     if (await canLaunch(targetPageURL)) {
       await launch(targetPageURL);
@@ -89,7 +88,7 @@ class profile extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       ElevatedButton(
-                        onPressed: email,
+                        onPressed: email, // butona bastığımızda gmaili açıyor
                         child: Row(
                           children: [
                             SizedBox(
@@ -238,6 +237,7 @@ class profile extends StatelessWidget {
               child: Text(
                 yazi,
                 style: TextStyle(
+                    fontFamily: "protest",
                     color: Color.fromARGB(255, 255, 255, 255),
                     fontWeight: FontWeight.w600,
                     fontSize: 25),
@@ -286,6 +286,7 @@ class profile extends StatelessWidget {
               child: Text(
                 yazi,
                 style: TextStyle(
+                    fontFamily: "protest",
                     color: Color.fromARGB(255, 46, 45, 60),
                     fontWeight: FontWeight.w600,
                     fontSize: 25),

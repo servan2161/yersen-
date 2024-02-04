@@ -149,7 +149,10 @@ class _weelcomeState extends State<weelcome> {
                   Text(
                     "Yersen",
                     style: TextStyle(
-                        fontSize: 50, color: Color.fromARGB(255, 52, 55, 60)),
+                      fontFamily: "protest",
+                      fontSize: 50,
+                      color: Color.fromARGB(255, 52, 55, 60),
+                    ),
                   ),
                   SizedBox(
                     height: 80,
@@ -199,7 +202,9 @@ class _weelcomeState extends State<weelcome> {
               Text(
                 "Yersen",
                 style: TextStyle(
-                    fontSize: 50, color: Color.fromARGB(255, 52, 55, 60)),
+                    fontFamily: "protest",
+                    fontSize: 50,
+                    color: Color.fromARGB(255, 52, 55, 60)),
               ),
               SizedBox(
                 height: 80,
@@ -227,7 +232,8 @@ class _weelcomeState extends State<weelcome> {
 
   ElevatedButton login(BuildContext context) {
     return ElevatedButton(
-        onPressed: () => Navigator.pushNamed(context, '/home'), //kullanıci()
+        onPressed: () => Navigator.pushNamed(context, '/home'),
+        //kullanci,
         child: Container(
           margin: EdgeInsets.all(10),
           width: 110,
@@ -298,6 +304,7 @@ class _weelcomeState extends State<weelcome> {
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 5),
         child: TextField(
+          style: TextStyle(color: Colors.white),
           controller: emailkontrol,
           decoration: InputDecoration(
               hintText: 'Email',
@@ -324,6 +331,7 @@ Container password() {
     child: Padding(
       padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 5),
       child: TextField(
+        style: TextStyle(color: Colors.white),
         decoration: InputDecoration(
             hintText: 'password',
             prefixIcon: Icon(

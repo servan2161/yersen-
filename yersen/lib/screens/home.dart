@@ -37,7 +37,7 @@ class home extends StatelessWidget {
                       SizedBox(
                         height: 20,
                       ),
-                      foods(context, 'assets/images/corba.jpg', "/home",
+                      foods(context, 'assets/images/corba.jpg', "/corbalar",
                           'Çorbalar'),
                       foods(context, 'assets/images/adana.jpg', "/home",
                           'Ana Yemekler'),
@@ -100,7 +100,10 @@ class home extends StatelessWidget {
                               padding: const EdgeInsets.all(11.0),
                               child: Text(
                                 title,
-                                style: TextStyle(color: Colors.white),
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontFamily: "protest",
+                                ),
                               ),
                             ),
                             Icon(
@@ -156,7 +159,10 @@ class home extends StatelessWidget {
       children: [
         Text(
           yazi,
-          style: TextStyle(fontSize: 23, fontWeight: FontWeight.w600),
+          style: TextStyle(
+            fontSize: 23,
+            fontWeight: FontWeight.w600,
+          ),
         ),
       ],
     );
