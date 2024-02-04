@@ -24,7 +24,7 @@
    <img src="https://github.com/servan2161/yersen-/assets/112212734/c24467da-c17a-491a-9dfc-49a1fee3df69" width="280" height="514" >
 </a>
 
-  -----------------------------------------------------------------🍟🌯🍕 'Yersen' 😋😋-----------------------------------------------------------------
+  -----------------------------------------------------------🍟🌯🍕 'Yersen' 😋😋-----------------------------------------------------------
   
   İlk olarak projemize başlarken temel hedefimiz az da olsa insanları “Bugün ne yemek yapsak ya?” derdinden kurtarmaktı.  Uygulamamızı en çok öğrenci arkadaşlarımıza, çalışan yetişkinlerimize, evde olan annelerimize yani kısaca herkese çok rahat bir şekilde hitap edecek şekilde tasarladık. Renk seçimlerimize kadar canlı ve dikkat çekecek şekilde özenli ve düzenli bir şekilde ortaya sunduk. Tabii ki de ufak kusurlarımız, eksiklerimiz bulunmaktadır.
 
