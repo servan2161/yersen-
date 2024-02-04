@@ -25,7 +25,7 @@ class home extends StatelessWidget {
                   child: Column(
                     children: [
                       sef(),
-                      Divider(),
+                      Divider(), //çizgi atar
                       Padding(
                         padding: const EdgeInsets.all(15.0),
                         child: write('Yemekler'),
@@ -45,6 +45,10 @@ class home extends StatelessWidget {
                           'Pizzalar'),
                       foods(context, 'assets/images/lazanya.jpg', "/home",
                           'Makarnalar'),
+                      foods(context, 'assets/images/balık.jpg', "/home",
+                          'Balıklar'),
+                      foods(context, 'assets/images/pro.jpg', "/home",
+                          'Tatlılar'),
                     ],
                   ),
                 ),

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:yersen/screens/corbalar.dart';
+import 'package:yersen/screens/mercimek.dart';
+import 'package:yersen/screens/tariflerim.dart';
 import 'package:yersen/screens/weelcome.dart';
 import 'package:yersen/screens/home.dart';
 import 'package:yersen/screens/singup.dart';
@@ -25,6 +27,8 @@ class MyApp extends StatelessWidget {
         '/profile': (context) => profile(),
         '/weelcome': (context) => weelcome(),
         '/corbalar': (context) => corba(),
+        '/mercimek': (context) => mercimek(),
+        '/tariflerim': (context) => tariflerim(),
       },
       initialRoute: '/weelcome',
       theme: ThemeData(

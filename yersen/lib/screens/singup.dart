@@ -28,7 +28,7 @@ class singnup extends StatelessWidget {
             ),
           ),
           SizedBox(
-            height: 80,
+            height: 100,
           ),
           kutu('Name', Icons.person),
           SizedBox(
@@ -44,7 +44,7 @@ class singnup extends StatelessWidget {
           ),
           kutu('Cinsiyet ', Icons.wc),
           SizedBox(
-            height: 60,
+            height: 120,
           ),
           buton(context),
         ],

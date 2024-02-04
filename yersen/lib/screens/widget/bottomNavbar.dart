@@ -21,7 +21,7 @@ class bottom extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             icon(context, Icons.home, "/home"),
-            icon(context, Icons.menu_book, "/singnup"),
+            icon(context, Icons.menu_book, "/tariflerim"),
             icon(context, Icons.person, "/profile"),
           ],
         ),

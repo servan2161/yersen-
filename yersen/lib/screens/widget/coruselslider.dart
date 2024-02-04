@@ -10,12 +10,13 @@ class corusel extends StatefulWidget {
 
 class _coruselState extends State<corusel> {
   final List<String> imgList = [
-    'assets/images/lazanya.jpg',
+    'assets/images/cupra.jpg',
     'assets/images/kanat.jpg',
     'assets/images/pizza.jpg',
     'assets/images/pilav.jpg',
-    'assets/images/corba.jpg',
-    'assets/images/adana.jpg'
+    'assets/images/lazanya.jpg',
+    'assets/images/tralice.jpg',
+    'assets/images/patlıcankebap.jpg',
   ];
   @override
   Widget build(BuildContext context) {
