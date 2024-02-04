@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:yersen/screens/weelcome.dart';
-import 'package:yersen/screens/welcome.dart';
 import 'package:yersen/screens/home.dart';
 import 'package:yersen/screens/singup.dart';
 import 'package:yersen/screens/deneme.dart';
@@ -19,7 +18,6 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       routes: {
-        '/welcome': (context) => welcome(),
         '/home': (context) => home(),
         '/singnup': (context) => singnup(),
         '/deneme': (context) => denme(),
