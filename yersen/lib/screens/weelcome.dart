@@ -36,13 +36,12 @@ class _weelcomeState extends State<weelcome> {
   }
 
   var emailkontrol = TextEditingController(); //kullanıcının emailini almak için
-  var passwordkontrol =
-      TextEditingController(); //kullanıcının passwordünü  almak için
+  var parola = TextEditingController(); //kullanıcının passwordünü  almak için
 
   kullanci() async {
     API api = API();
-    final cevap = await api.login(
-        email: emailkontrol.text, password: passwordkontrol.text);
+    final cevap =
+        await api.login(email: emailkontrol.text, password: parola.text);
     if (cevap is Exception) {
       print(cevap);
     } else {
@@ -305,7 +304,7 @@ class _weelcomeState extends State<weelcome> {
         padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 5),
         child: TextField(
           style: TextStyle(color: Colors.white),
-          controller: emailkontrol,
+          controller: emailkontrol, //email kontrol etmek için
           decoration: InputDecoration(
               hintText: 'Email',
               prefixIcon: Icon(
@@ -318,31 +317,32 @@ class _weelcomeState extends State<weelcome> {
       ),
     );
   }
-}
 
-Container password() {
-  return Container(
-    margin: EdgeInsets.all(10),
-    width: 350,
-    height: 50,
-    decoration: BoxDecoration(
-        color: Color.fromARGB(255, 52, 55, 60),
-        borderRadius: BorderRadius.circular(100)),
-    child: Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 5),
-      child: TextField(
-        style: TextStyle(color: Colors.white),
-        decoration: InputDecoration(
-            hintText: 'password',
-            prefixIcon: Icon(
-              Icons.lock,
-              color: Color.fromARGB(210, 255, 255, 255),
-            ),
-            border: InputBorder.none,
-            hintStyle:
-                TextStyle(color: const Color.fromARGB(92, 255, 255, 255))),
-        obscureText: true, // yazdığımız şifreyi gizleyen kod
+  Container password() {
+    return Container(
+      margin: EdgeInsets.all(10),
+      width: 350,
+      height: 50,
+      decoration: BoxDecoration(
+          color: Color.fromARGB(255, 52, 55, 60),
+          borderRadius: BorderRadius.circular(100)),
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 5),
+        child: TextField(
+          style: TextStyle(color: Colors.white),
+          controller: parola,
+          decoration: InputDecoration(
+              hintText: 'password',
+              prefixIcon: Icon(
+                Icons.lock,
+                color: Color.fromARGB(210, 255, 255, 255),
+              ),
+              border: InputBorder.none,
+              hintStyle:
+                  TextStyle(color: const Color.fromARGB(92, 255, 255, 255))),
+          obscureText: true, // yazdığımız şifreyi gizleyen kod
+        ),
       ),
-    ),
-  );
+    );
+  }
 }

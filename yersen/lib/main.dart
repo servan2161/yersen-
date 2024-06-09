@@ -7,6 +7,7 @@ import 'package:yersen/screens/home.dart';
 import 'package:yersen/screens/singup.dart';
 import 'package:yersen/screens/deneme.dart';
 import 'package:yersen/screens/profile.dart';
+import 'package:yersen/screens/boarding.dart';
 
 void main() {
   runApp(const MyApp());
@@ -29,8 +30,9 @@ class MyApp extends StatelessWidget {
         '/corbalar': (context) => corba(),
         '/mercimek': (context) => mercimek(),
         '/tariflerim': (context) => tariflerim(),
+        '/boarding': (context) => boarding(),
       },
-      initialRoute: '/weelcome',
+      initialRoute: '/boarding',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
