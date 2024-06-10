@@ -1,6 +1,7 @@
 // ignore_for_file: sort_child_properties_last
 
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:yersen/screens/widget/myappbar.dart';
 
 class tariflerim extends StatefulWidget {
@@ -95,7 +96,9 @@ class _tariflerimState extends State<tariflerim> {
           Row(
             children: [
               ElevatedButton(
-                onPressed: () => Navigator.pushNamed(context, fave),
+                onPressed: () {
+                  context.push('/mercimek');
+                },
                 child: Row(
                   children: [
                     Text(

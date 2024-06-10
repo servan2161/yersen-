@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:yersen/screens/widget/myappbar.dart';
 
 class singnup extends StatelessWidget {
@@ -54,7 +55,9 @@ class singnup extends StatelessWidget {
 
   ElevatedButton buton(BuildContext context) {
     return ElevatedButton(
-      onPressed: () => Navigator.pushNamed(context, '/home'),
+      onPressed: () {
+        context.push('/profile');
+      },
       child: Container(
         width: 150,
         child: Row(

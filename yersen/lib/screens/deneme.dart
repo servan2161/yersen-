@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:yersen/screens/responsive.dart';
+import 'package:yersen/screens/core/responsive.dart';
 
 class denme extends StatefulWidget {
   const denme({super.key});

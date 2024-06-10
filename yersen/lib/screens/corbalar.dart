@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:yersen/screens/widget/myappbar.dart';
 
 class corba extends StatefulWidget {
@@ -86,7 +87,9 @@ class _corbaState extends State<corba> {
             child: Row(
               children: [
                 ElevatedButton(
-                  onPressed: () => Navigator.pushNamed(context, ekranc),
+                  onPressed: () {
+                    context.push('/mercimek');
+                  },
                   child: Row(
                     children: [
                       Text(

@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, sort_child_properties_last
 
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:yersen/screens/widget/myappbar.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -32,7 +33,7 @@ class profile extends StatelessWidget {
               children: [
                 InkWell(
                   onTap: () {
-                    Navigator.pushNamed(context, '/weelcome');
+                    context.push('/weelcome');
                   },
                   child: Icon(
                     Icons.logout,

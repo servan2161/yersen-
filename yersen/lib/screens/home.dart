@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, sort_child_properties_last
 
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:yersen/screens/widget/bottomNavbar.dart';
 import 'package:yersen/screens/widget/coruselslider.dart';
 
@@ -96,7 +97,9 @@ class home extends StatelessWidget {
                     ),
                     Container(
                       child: ElevatedButton(
-                        onPressed: () => Navigator.pushNamed(context, screen),
+                        onPressed: () {
+                          context.push('/corbalar');
+                        },
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [

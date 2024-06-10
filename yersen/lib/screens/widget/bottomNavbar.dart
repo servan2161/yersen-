@@ -2,6 +2,7 @@
 //import ederek çağırdığımızda işimiz kolayşalmış olacak.
 
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class bottom extends StatelessWidget {
   const bottom({
@@ -34,7 +35,7 @@ class bottom extends StatelessWidget {
       padding: const EdgeInsets.all(15.0),
       child: InkWell(
         onTap: () {
-          Navigator.pushNamed(context, screen);
+          context.push(screen);
         },
         child: Icon(
           icon,

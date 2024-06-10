@@ -1,7 +1,8 @@
 // ignore_for_file: prefer_const_constructors, sort_child_properties_last, prefer_const_literals_to_create_immutables
 //responsice welcome sayfası
 
-import 'package:yersen/screens/responsive.dart';
+import 'package:go_router/go_router.dart';
+import 'package:yersen/screens/core/responsive.dart';
 import 'package:flutter/material.dart';
 import 'package:yersen/services/api.dart';
 import 'package:yersen/services/storage.dart';
@@ -231,7 +232,9 @@ class _weelcomeState extends State<weelcome> {
 
   ElevatedButton login(BuildContext context) {
     return ElevatedButton(
-        onPressed: () => Navigator.pushNamed(context, '/home'),
+        onPressed: () {
+          context.push('/home');
+        },
         //kullanci,
         child: Container(
           margin: EdgeInsets.all(10),
@@ -263,7 +266,9 @@ class _weelcomeState extends State<weelcome> {
 
   ElevatedButton signup(BuildContext context) {
     return ElevatedButton(
-        onPressed: () => Navigator.pushNamed(context, '/singnup'),
+        onPressed: () {
+          context.push('/singup');
+        },
         child: Container(
           margin: EdgeInsets.all(10),
           width: 110,

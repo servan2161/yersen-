@@ -28,7 +28,7 @@ class _boardingState extends State<boarding> {
                   final storage = Storage();
                   await storage.firstlauched();
 
-                  context.push('/profile');
+                  GoRouter.of(context).replace("/home");
                 },
                 child: page == 2
                     ? Text(
