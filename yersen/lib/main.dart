@@ -1,14 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:yersen/screens/corbalar.dart';
+
 import 'package:yersen/screens/core/routes.dart';
-import 'package:yersen/screens/mercimek.dart';
-import 'package:yersen/screens/tariflerim.dart';
-import 'package:yersen/screens/weelcome.dart';
-import 'package:yersen/screens/home.dart';
-import 'package:yersen/screens/singup.dart';
-import 'package:yersen/screens/deneme.dart';
-import 'package:yersen/screens/profile.dart';
-import 'package:yersen/static/boarding.dart';
 
 void main() {
   runApp(const MyApp());

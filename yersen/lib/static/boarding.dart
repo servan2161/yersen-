@@ -19,7 +19,7 @@ class _boardingState extends State<boarding> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 34, 38, 43),
+        backgroundColor: Color.fromARGB(255, 94, 85, 196),
         actions: [
           Padding(
             padding: const EdgeInsets.all(17.0),
@@ -28,7 +28,7 @@ class _boardingState extends State<boarding> {
                   final storage = Storage();
                   await storage.firstlauched();
 
-                  GoRouter.of(context).replace("/home");
+                  GoRouter.of(context).replace("/weelcome");
                 },
                 child: page == 2
                     ? Text(
@@ -42,7 +42,7 @@ class _boardingState extends State<boarding> {
           )
         ],
       ),
-      backgroundColor: Color.fromARGB(255, 34, 38, 43),
+      backgroundColor: Color.fromARGB(255, 94, 85, 196),
       body: SafeArea(
           child: PreloadPageView(
         onPageChanged: (value) {
@@ -52,22 +52,22 @@ class _boardingState extends State<boarding> {
         },
         children: [
           item(
-            image: "assets/images/adana.jpg",
-            title: "The Easy Way to Buy Your Dream Car",
+            image: "assets/images/cook.jpg",
+            title: "Yemek Yapmanın En Hızlı Ve En Kolay Yolu",
             description:
-                "I hear that you want to travel with the car of your dreams.",
+                "Midenizin zil çaldığını duyar gibiyim. Eğer sizde açsanız haydi bizimle yersene",
           ),
           item(
-            image: "assets/images/adana.jpg",
-            title: "Reliable Expert Report",
+            image: "assets/images/ascı.jpg",
+            title: "İsterseniz Bir Aşcı Olabilirsiniz ",
             description:
-                "We reliably present you the most accurate report of your car with our sworn experts.",
+                "Gireceğiniz tarifler ile hem kendiniz hem de diğer kullanıcılar ile etkileşiminiz kurabilirsiniz.",
           ),
           item(
-            image: "assets/images/adana.jpg",
-            title: "Easy Payment",
+            image: "assets/images/gurme.png",
+            title: "İsterseniz Bir Gurme Olabilirsiniz.",
             description:
-                "We are here with easy and convenient payment options.",
+                "Görüpte yapmak istediğiniz tarfileri sizde deneyerek damak zevkinizi binlerce tarif arasından bulabilirsiniz",
           ),
         ],
       )),
