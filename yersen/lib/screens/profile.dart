@@ -1,12 +1,40 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, sort_child_properties_last
 
+import 'dart:io';
+
 import 'package:flutter/material.dart';
+import 'package:gap/gap.dart';
 import 'package:go_router/go_router.dart';
+import 'package:image_picker/image_picker.dart';
+import 'package:yersen/screens/singup.dart';
 import 'package:yersen/screens/widget/myappbar.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class profile extends StatelessWidget {
-  const profile({super.key});
+  profile({super.key});
+
+  File? dosya;
+  profilefotouptade() async {
+    try {
+      ImagePicker picker = ImagePicker();
+      XFile? secilendosya = await picker.pickImage(source: ImageSource.gallery);
+      if (secilendosya == null) {
+        setState() {
+          dosya = null;
+        }
+
+        return;
+      }
+
+      setState() {
+        dosya = File(secilendosya.path);
+      }
+    } on Exception catch (e) {
+      print("hata oluştu");
+      print(e);
+    }
+  }
+
   final String targetPageURL = "https://www.google.com/intl/tr/gmail/about/";
   // urlyi tanımlayıp aşağıda da fonksiyonu tanımladığımız yer
   void email() async {
@@ -81,7 +109,7 @@ class profile extends StatelessWidget {
             ],
           ),
           SizedBox(
-            height: 70,
+            height: 40,
           ),
           Column(
             children: [
@@ -117,6 +145,15 @@ class profile extends StatelessWidget {
                       ),
                     ],
                   ),
+                  Gap(15),
+                  OutlinedButton(
+                    style: OutlinedButton.styleFrom(minimumSize: Size(35, 35)),
+                    onPressed: profilefotouptade,
+                    child: Text(
+                      ("Profil Resmi Değiştirme"),
+                      style: TextStyle(color: Color.fromARGB(255, 94, 85, 196)),
+                    ),
+                  )
                 ],
               ),
             ],

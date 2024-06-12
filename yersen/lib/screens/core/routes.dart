@@ -41,11 +41,7 @@ final routes = GoRouter(
     ),
     GoRoute(
       path: '/profile',
-      builder: (context, state) => const profile(),
-    ),
-    GoRoute(
-      path: '/profile',
-      builder: (context, state) => const profile(),
+      builder: (context, state) => profile(),
     ),
     GoRoute(
       path: '/tariflerim',

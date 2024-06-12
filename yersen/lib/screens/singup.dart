@@ -56,7 +56,7 @@ class singnup extends StatelessWidget {
   ElevatedButton buton(BuildContext context) {
     return ElevatedButton(
       onPressed: () {
-        context.push('/profile');
+        context.push('/home');
       },
       child: Container(
         width: 150,
