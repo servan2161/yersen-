@@ -11,9 +11,6 @@
 <a href="" rel="nofollow">
    <img src="https://github.com/servan2161/yersen-/assets/112212734/177cd671-eabf-4a37-af0e-0e52d95a8fe6" width="280" height="514" >
 </a>
-<a href="" rel="nofollow">
-   <img src="https://github.com/servan2161/yersen-/assets/112212734/53a42da3-124b-4c26-b4a9-092f5bad2354" width="280" height="514" >
-</a>
 
 <a href="" rel="nofollow">
    <img src="https://github.com/servan2161/yersen-/assets/112212734/ddd51539-9647-4cc1-8db1-208fd2e66058" width="280" height="514" >
